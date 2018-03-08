@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-first-blog" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/08/first-blog/" class="article-date">
+  <time datetime="2018-03-08T08:09:03.914Z" itemprop="datePublished">2018-03-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/08/first-blog/">GIT Guide - For Beginner</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://git-scm.com/images/logos/downloads/Git-Logo-1788C.png" alt="Git Logo"> </p>
+<h2 id="TABLE-OF-CONTENT"><a href="#TABLE-OF-CONTENT" class="headerlink" title="TABLE OF CONTENT"></a>TABLE OF CONTENT</h2><ul>
+<li><a href="#setup">Setup</a> </li>
+<li><a href="#new-repo">Create New Repository</a></li>
+<li><a href="checkout-repo">Checkout a Repository</a></li>
+<li><a href="#workflow">Workflow</a></li>
+<li><a href="#add-commit">Add and Commit</a></li>
+<li><a href="#pushing-changes">Pushing Changes</a></li>
+<li><a href="#branching">Branching</a></li>
+<li><a href="#update-and-merge">Update and Merge</a></li>
+<li><a href="#tagging">Tagging</a></li>
+<li><a href="#log">Log</a></li>
+<li><a href="#replace-local-change">Replace Local Changes</a></li>
+<li><a href="#hints">Useful Hints</a></li>
+<li><a href="#link-and-resource">Link and Resource</a></li>
+</ul>
+<h2 id="Setup"><a href="#Setup" class="headerlink" title="Setup "></a>Setup <a name="setup"></a></h2><blockquote>
+<p><a href="https://git-scm.com/download/mac" target="_blank" rel="noopener">Download Git For Mac</a><br><a href="https://gitforwindows.org/" target="_blank" rel="noopener">Download Git For Windows</a><br><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank" rel="noopener">Download Git For Linux</a></p>
+</blockquote>
+<h2 id="Create-New-Repository"><a href="#Create-New-Repository" class="headerlink" title="Create New Repository "></a>Create New Repository <a name="new-repo"></a></h2><p>membuka direktori baru, untuk menginisialisasi direktori di git</p>
+<h2 id="Checkout-a-Repository"><a href="#Checkout-a-Repository" class="headerlink" title="Checkout a Repository "></a>Checkout a Repository <a name="checkout-repo"></a></h2><p>membuat salinan dari repositori lokal</p>
+<h2 id="Workflow"><a href="#Workflow" class="headerlink" title="Workflow "></a>Workflow <a name="workflow"></a></h2><p>repositori lokal terdiri dari 3 bagian pokok yang disebut trees.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Nomor</th>
+<th style="text-align:center">Nama</th>
+<th style="text-align:center">Fungsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1.</td>
+<td style="text-align:center">Working Directory</td>
+<td style="text-align:center">Untuk menyimpan berkas asli</td>
+</tr>
+<tr>
+<td style="text-align:center">2.</td>
+<td style="text-align:center">Index</td>
+<td style="text-align:center">Untuk pengelolaan data</td>
+</tr>
+<tr>
+<td style="text-align:center">3.</td>
+<td style="text-align:center">Head</td>
+<td style="text-align:center">Untuk mengarahkan ke commit terakhir</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Add-and-Commit"><a href="#Add-and-Commit" class="headerlink" title="Add and Commit "></a>Add and Commit <a name="add-commit"></a></h2><table>
+<thead>
+<tr>
+<th style="text-align:center">Nomor</th>
+<th style="text-align:center">Sintaks</th>
+<th style="text-align:center">Fungsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1.</td>
+<td style="text-align:center"><code>$ git add &lt;namaberkas&gt;</code> <code>$ atau git add *</code></td>
+<td style="text-align:center">Melakukan perubahan dengan menambahkan direktori di indeks.</td>
+</tr>
+<tr>
+<td style="text-align:center">2.</td>
+<td style="text-align:center"><code>$ git commit -m &#39;pesan terhadap perubahan yg dilakukan&#39;</code></td>
+<td style="text-align:center">untuk commit seluruh perubahan pada berkas</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Penjelasan"><a href="#Penjelasan" class="headerlink" title="Penjelasan :"></a>Penjelasan :</h3><p>(-m) pada sintaks diatas maksudnya message / pesan, isi pesan ada di dalam tanda kutip satu (‘’) atau kutip (“”). Dengan melakukan commit maka kita harus meninggalkan pesan agar perubahan yg terjadi di repository dapat dipantau. Setelah commit berkas sudah ada di bagian Head.</p>
+<h2 id="Pushing-Changes"><a href="#Pushing-Changes" class="headerlink" title="Pushing Changes "></a>Pushing Changes <a name="pushing-changes"></a></h2><table>
+<thead>
+<tr>
+<th style="text-align:center">Nomor</th>
+<th style="text-align:center">Sintaks</th>
+<th style="text-align:center">Fungsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1.</td>
+<td style="text-align:center"><code>$ git push origin &lt;branch&gt;</code></td>
+<td style="text-align:center">Untuk mengirimkan berkas ke remote repositori</td>
+</tr>
+<tr>
+<td style="text-align:center">2.</td>
+<td style="text-align:center"><code>$ git remote add origin &lt;server&gt;</code></td>
+<td style="text-align:center">Sekarang kamu bisa mengirimkan perubahan ke server jarak-jauh yang dituju</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Penjelasan-1"><a href="#Penjelasan-1" class="headerlink" title="Penjelasan :"></a>Penjelasan :</h3><p>Saat ini perubahan telah tersimpan di HEAD salinan kerja lokal. Ubah <branch> sesuai dengan branch yang diinginkan.<br>Jika repositori yang ada belum dikloning dan ingin dihubungkan ke remote server, perlu ditambahkan sintaks no.2  </branch></p>
+<h2 id="Branching"><a href="#Branching" class="headerlink" title="Branching "></a>Branching <a name="branching"></a></h2><p>percabangan atau branching digunakan untuk mengembangkan fitur-fitur secara terisolasi. Cabang utama atau master merupakan cabang bawaan ketika kamu membuat repositori.<br>Gunakan cabang lain untuk melakukan pengembangan, setelah selesai, gabungkan / merge kembali ke cabang utama.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Nomor</th>
+<th style="text-align:center">Sintaks</th>
+<th style="text-align:center">Fungsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1.</td>
+<td style="text-align:center"><code>$ git checkout -b fiturX</code></td>
+<td style="text-align:center">buat cabang baru dengan nama “fiturX”</td>
+</tr>
+<tr>
+<td style="text-align:center">2.</td>
+<td style="text-align:center"><code>$ git checkout master</code></td>
+<td style="text-align:center">beralih kembali ke master</td>
+</tr>
+<tr>
+<td style="text-align:center">3.</td>
+<td style="text-align:center"><code>$ git branch -d fitur_x</code></td>
+<td style="text-align:center">hapus cabang yang tadi dibuat</td>
+</tr>
+<tr>
+<td style="text-align:center">4.</td>
+<td style="text-align:center"><code>$ git push origin &lt;cabang&gt;</code></td>
+<td style="text-align:center">suatu cabang tidak terbuka untuk yang lainnya kecuali jika kamu mengirimkannya ke remote repositori.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Penjelasan-2"><a href="#Penjelasan-2" class="headerlink" title="Penjelasan :"></a>Penjelasan :</h3><p>Membuat cabang / branch baru, kemudian masuk ke dalam branch fiturX dengan sintaks no.1 dan menjadikan fiturX sebagai working page.<br>Beralih ke branch master dengan menggunakan sintaks no.2 (menjadikan master sebagai working page).<br>Sintaks no.3 digunakan untuk menghapus branch yg sudah dibuat. </p>
+<h2 id="Update-and-Merge"><a href="#Update-and-Merge" class="headerlink" title="Update and Merge "></a>Update and Merge <a name="update-and-merge"></a></h2><table>
+<thead>
+<tr>
+<th style="text-align:center">Nomor</th>
+<th style="text-align:center">Sintaks</th>
+<th style="text-align:center">Fungsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1.</td>
+<td style="text-align:center"><code>$ git pull</code></td>
+<td style="text-align:center">untuk memperbarui repositori lokal ke komit terkini</td>
+</tr>
+<tr>
+<td style="text-align:center">2.</td>
+<td style="text-align:center"><code>$ git merge &lt;cabang&gt;</code></td>
+<td style="text-align:center">mengambil dan menggabungkan perubahan direktori kerja dengan cabang / branch lain (misal master)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Penjelasan-3"><a href="#Penjelasan-3" class="headerlink" title="Penjelasan :"></a>Penjelasan :</h3><p>pada kasus diatas, git mencoba menggabungkan perubahan secara otomatis.<br>Sayangnya hal ini tak selalu berjalan mulus dan bisa menyebabkan konflik.<br>Jika terjadi konflik maka menyelasaikan konflik tersebut secara manual dengan menyunting berkas yang ditunjukkan git.<br>Setelah itu, perlu dimarkahi dengan sintaks berikut :</p>
+<p><code>$ git add &lt;namaberkas&gt;</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Nomor</th>
+<th style="text-align:center">Sintaks</th>
+<th style="text-align:center">Fungsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">3.</td>
+<td style="text-align:center"><code>$ git diff &lt;cabang_asal&gt; &lt;cabang_tujuan&gt;</code></td>
+<td style="text-align:center">melakukan pratinjau terhadap cabang / branch sebelum menggunakan merge</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Tagging"><a href="#Tagging" class="headerlink" title="Tagging "></a>Tagging <a name="tagging"></a></h2><table>
+<thead>
+<tr>
+<th style="text-align:center">Nomor</th>
+<th style="text-align:center">Sintaks</th>
+<th style="text-align:center">Fungsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1.</td>
+<td style="text-align:center"><code>$ git tag 1.0.0 1b2e1d63ff</code></td>
+<td style="text-align:center">membuat penanda baru dengan nama 1.0.0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Penjelasan-4"><a href="#Penjelasan-4" class="headerlink" title="Penjelasan :"></a>Penjelasan :</h3><p>Dianjurkan membuat penanda atau tags untuk perangkat lunak yang dirilis.<br>1b2e1d63ff adalah 10 karakter pertama dari identitas komit sebagai referensi ke penanda.<br>Kamu bisa mendapatkan identitas komit dengan melihat… </p>
+<h2 id="Log"><a href="#Log" class="headerlink" title="Log "></a>Log <a name="log"></a></h2><table>
+<thead>
+<tr>
+<th style="text-align:center">Nomor</th>
+<th style="text-align:center">Sintaks</th>
+<th style="text-align:center">Fungsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1.</td>
+<td style="text-align:center"><code>$ git log</code></td>
+<td style="text-align:center">Melihat aktifitas yg terjadi dalam repositori git</td>
+</tr>
+<tr>
+<td style="text-align:center">2.</td>
+<td style="text-align:center"><code>$ git log --author=bob</code></td>
+<td style="text-align:center">Menambah parameter untuk melihat commit dari penulis tertentu, misal : bob</td>
+</tr>
+<tr>
+<td style="text-align:center">3.</td>
+<td style="text-align:center"><code>$ git log --pretty=oneline</code></td>
+<td style="text-align:center">Untuk melihat log yang dimampatkan secara satu baris per commit</td>
+</tr>
+<tr>
+<td style="text-align:center">4.</td>
+<td style="text-align:center"><code>$ git log --graph --oneline --decorate --all</code></td>
+<td style="text-align:center">melihat ASCII tree art seluruh branch disertai nama dan penandanya</td>
+</tr>
+<tr>
+<td style="text-align:center">5.</td>
+<td style="text-align:center"><code>$ git log --name-status</code></td>
+<td style="text-align:center">Melihat perubahan berkas</td>
+</tr>
+<tr>
+<td style="text-align:center">6.</td>
+<td style="text-align:center"><code>$ git log --help</code></td>
+<td style="text-align:center">Untuk melihat sintaks-sintaks yg terdapat di git.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Penjelasan-5"><a href="#Penjelasan-5" class="headerlink" title="Penjelasan :"></a>Penjelasan :</h3><p>kamu bisa menambahkan banyak parameter untuk menampilkan log sesuai keinginan. Contohnya ada di sintaks no.1</p>
+<h2 id="Replace-Local-Changes"><a href="#Replace-Local-Changes" class="headerlink" title="Replace Local Changes "></a>Replace Local Changes <a name="replace-local-changes"></a></h2><table>
+<thead>
+<tr>
+<th style="text-align:center">Nomor</th>
+<th style="text-align:center">Sintaks</th>
+<th style="text-align:center">Fungsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1.</td>
+<td style="text-align:center"><code>$ git checkout -- &lt;namaberkas&gt;</code></td>
+<td style="text-align:center">Seandainya kesalahan terjadi bisa dikembalikannya menggunakan sintaks ini</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Penjelasan-6"><a href="#Penjelasan-6" class="headerlink" title="Penjelasan :"></a>Penjelasan :</h3><p>perintah di atas mengembalikan perubahan di dalam berkas kerja dengan konten terakhir dari HEAD. Perubahan dan berkas baru yang telah ditambahkan ke indeks akan tetap tersimpan.<br>Jika kamu ingin menggugurkan perubahan dan commit lokal secara menyeluruh, ambil riwayat terakhir dari server dan arahkan ke cabang master lokal seperti sintaks berikut ini :</p>
+<p><code>$ git fetch origin</code> / <code>$ git reset --hard origin/master</code></p>
+<h2 id="Useful-Hints"><a href="#Useful-Hints" class="headerlink" title="Useful Hints "></a>Useful Hints <a name="hints"></a></h2><table>
+<thead>
+<tr>
+<th style="text-align:center">Nomor</th>
+<th style="text-align:center">Sintaks</th>
+<th style="text-align:center">Fungsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1.</td>
+<td style="text-align:center"><code>$ gitk</code></td>
+<td style="text-align:center">GUI git bawaan</td>
+</tr>
+<tr>
+<td style="text-align:center">2.</td>
+<td style="text-align:center"><code>$ git config color.ui true</code></td>
+<td style="text-align:center">menggunakan output git penuh warna</td>
+</tr>
+<tr>
+<td style="text-align:center">3.</td>
+<td style="text-align:center"><code>$ git config format.pretty oneline</code></td>
+<td style="text-align:center">menunjukkan log satu baris per komit</td>
+</tr>
+<tr>
+<td style="text-align:center">4.</td>
+<td style="text-align:center"><code>$ git add -i</code></td>
+<td style="text-align:center">menggunakan penambahan interaktif</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Link-and-Resource"><a href="#Link-and-Resource" class="headerlink" title="Link and Resource "></a>Link and Resource <a name="link-and-resource"></a></h2><blockquote>
+<h2 id="Klien-Grafis"><a href="#Klien-Grafis" class="headerlink" title="Klien Grafis"></a>Klien Grafis</h2><p><a href="http://gitx.laullon.com" target="_blank" rel="noopener">GitX (L) (OSX, sumber terbuka)</a><br><a href="https://www.git-tower.com/windows/" target="_blank" rel="noopener">Tower (OSX)</a><br><a href="https://www.sourcetreeapp.com/" target="_blank" rel="noopener">Source Tree (OSX &amp; Windows, bebas)</a><br><a href="https://desktop.github.com/" target="_blank" rel="noopener">GitHub for Mac (OSX, bebas)</a><br><a href="https://itunes.apple.com/gb/app/gitbox/id403388357?mt=12" target="_blank" rel="noopener">GitBox (OSX, App Store)</a></p>
+<h2 id="Panduan"><a href="#Panduan" class="headerlink" title="Panduan"></a>Panduan</h2><p><a href="https://git-scm.com/book/id/v2" target="_blank" rel="noopener">Buku Komunitas Git</a><br><a href="https://progit.org/book/" target="_blank" rel="noopener">Git Pro</a><br><a href="http://think-like-a-git.net/" target="_blank" rel="noopener">Berfikir seperti git</a><br><a href="https://help.github.com/" target="_blank" rel="noopener">Bantuan GitHub</a><br><a href="http://marklodato.github.io/visual-git-guide/index-en.html" target="_blank" rel="noopener">Panduan Git Visual</a></p>
+<h2 id="Bantuan"><a href="#Bantuan" class="headerlink" title="Bantuan"></a>Bantuan</h2><p><a href="https://groups.google.com/forum/#!forum/git-users" target="_blank" rel="noopener">Milis Pengguna Git</a><br><a href="https://gitirc.eu/" target="_blank" rel="noopener">git di irc.freenode.net</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/08/first-blog/" data-id="cjei8e8bg0001j0vnmxdzsn3g" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/08/hello-world/" class="article-date">
+  <time datetime="2018-03-08T08:00:50.863Z" itemprop="datePublished">2018-03-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/08/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/08/hello-world/" data-id="cjei86a4a0000povn50y3p8fx" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/03/08/first-blog/">GIT Guide - For Beginner</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/08/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
